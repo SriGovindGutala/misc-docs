@@ -1,0 +1,1355 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fswiss\fcharset0 ArialMT;
+}
+{\colortbl;\red255\green255\blue255;\red1\green30\blue103;\red252\green252\blue252;\red38\green38\blue38;
+\red10\green86\blue216;\red0\green0\blue0;\red245\green245\blue245;\red192\green0\blue4;\red3\green53\blue197;
+\red107\green0\blue109;\red252\green106\blue8;\red15\green112\blue1;\red38\green38\blue38;\red255\green255\blue255;
+\red255\green255\blue255;\red22\green100\blue185;}
+{\*\expandedcolortbl;;\cssrgb\c0\c17647\c47843;\cssrgb\c99216\c99216\c99216;\cssrgb\c20000\c20000\c20000;
+\cssrgb\c0\c43529\c87843;\cssrgb\c0\c0\c0;\cssrgb\c96863\c96863\c96863;\cssrgb\c80784\c0\c0;\cssrgb\c0\c30588\c81569;
+\cssrgb\c50196\c0\c50196;\cssrgb\c100000\c50196\c0;\cssrgb\c0\c50196\c0;\cssrgb\c20000\c20000\c20000;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c8627\c47843\c77647;}
+\margl1440\margr1440\vieww15540\viewh11700\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 nohup mode \
+ awk \
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
+I\cf4 .\cf5  \cf6 Intro\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf8 \cb3 1.\cf5  \cf6 A\cf5  \cf9 shell script contains commands that are executed \cf10 as\cf5  \cf10 if\cf5  \cf9 you typed them \cf10 in\cf5  \cf9 the \cf2 terminal\cf4 .\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf8 \cb3 2.\cf5  \cf6 We'\cf9 ll be using \cf10 Vim\cf5  \cf10 for\cf5  \cf10 this\cf5  \cf6 tutorial\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 a\cf4 .\cf5  \cf9 Install \cf10 Vim\cf5  : \cf9 sudo \cf2 apt\cf5 -\cf10 get\cf5  \cf9 install \cf10 vim\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 b\cf4 .\cf5  \cf10 Vim\cf5  \cf6 Commands\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 1.\cf5  \cf2 i\cf5  : \cf9 insert \cf6 mode\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 2.\cf5  <\cf2 ESC\cf5 > : \cf9 enter \cf10 command\cf5  \cf6 mode\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 			\cf2 i\cf4 .\cf5  \cf2 w\cf5  : \cf2 Save\cf5  / \cf6 Don't\cf5  \cf10 Exit\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf2 ii\cf4 .\cf5  \cf2 wq\cf5  : \cf2 Save\cf5  / \cf9 Quit\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb7 			\cf2 iii\cf4 .\cf5  \cf2 q\cf5 ! : \cf2 Quit\cf5  / \cf9 Discard Changes\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3 			\cf2 iv\cf4 .\cf5  \cf2 w\cf5  : \cf9 Move \cf10 to\cf5  \cf9 front of next \cf10 word\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 			\cf2 v\cf4 .\cf5  \cf2 b\cf5  : \cf9 Move backwards \cf10 to\cf5  \cf9 front of \cf10 word\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 vi\cf4 .\cf5  \cf8 0\cf5  : \cf9 Move \cf10 to\cf5  \cf9 start of line\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb7 			\cf2 vii\cf4 .\cf5  \cf4 $\cf5  : \cf9 Move \cf10 to\cf5  \cf10 end\cf5  \cf9 of line\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3 			\cf2 viii\cf4 .\cf5  \cf2 G\cf5  : \cf9 Jump \cf10 to\cf5  \cf9 last \cf6 line\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 3.\cf5  \cf9 Move around with \cf6 arrows\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 4.\cf5  :\cf9 set \cf2 number\cf5  : \cf9 Displays line \cf6 numbers\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 5.\cf5  :\cf9 syntax \cf2 on\cf5  : \cf9 Syntax \cf6 Highlighting\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 6.\cf5  :\cf9 set \cf2 tabstop\cf5 =\cf8 2\cf5  : \cf9 Spaces \cf10 in\cf5  \cf6 tab\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 7.\cf5  :\cf9 set \cf2 autoindent\cf5  : \cf9 Indent \cf10 new\cf5  \cf6 lines\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 8.\cf5  \cf9 Save these \cf10 in\cf5  \cf9 your \cf2 home\cf5 /~/\cf9 .vimrc\cf5  \cf10 file\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf2 a\cf4 .\cf5  \cf10 Find\cf5  \cf9 out \cf10 what\cf5  \cf9 vimrc \cf10 file\cf5  \cf9 you are using with \cf10 this\cf5  \cf10 command\cf5  \cf10 in\cf5  \cf10 Vim\cf5  :\cf10 echo\cf5  \cf2 $MYVIMRC\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 To delete bunch the lines:\
+1: come out of insert mode by pressing ESC\
+2: press v \
+3: use arrows to select the rows\
+4: press d\
+\
+To delete the entire vim\
+1: come out of insert mode by pressing ESC\
+2: press gg\
+3: press d\
+4: press G\
+\
+\
+To Copy lines and paste\
+1: come out of insert mode by pressing ESC\
+2: press v \
+3: use arrows to select the rows\
+4: press y\
+5: press p\
+\
+\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf8 \cb3 3.\cf5  \cf9 Hello World \cf2 Script\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf11 \cb7 # The #! shebang tells the system the interpreter to use for the script\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf11 \cb3 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf11 \cb7 # Comment\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf10 \cb3 echo\cf5  \cf12 'Hello World'\cf5  \cf11 # Print the string to the screen\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 a\cf4 .\cf5  \cf10 To\cf5  \cf10 make\cf5  \cf9 it executable \cf10 chmod\cf5  \cf8 755\cf5  \cf2 hello\cf4 _\cf6 world\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 b\cf4 .\cf5  \cf9 Execute \cf6 with\cf5  \cf4 .\cf5 /\cf2 hello\cf4 _\cf6 world\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 c\cf4 .\cf5  \cf9 The numbers after \cf10 chmod\cf5  \cf9 define \cf10 who\cf5  \cf9 can \cf10 do\cf5  \cf10 what\cf5  \cf9 with the \cf10 file\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 d\cf4 .\cf5  \cf9 The numbers represent the \cf2 Owner\cf4 ,\cf5  \cf9 the Group \cf10 and\cf5  \cf9 Everyone \cf10 else\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 e\cf4 .\cf5  \cf10 What\cf5  \cf9 the numbers \cf6 mean\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 1.\cf5  \cf8 7\cf5  : \cf10 Read\cf4 ,\cf5  \cf10 Write\cf5  & \cf6 Execute\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf8 2.\cf5  \cf8 6\cf5  : \cf10 Read\cf5  & \cf10 Write\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 3.\cf5  \cf8 5\cf5  : \cf10 Read\cf5  & \cf6 Execute\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf8 4.\cf5  \cf8 4\cf5  : \cf10 Read\cf5  \cf6 Only\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 5.\cf5  \cf8 3\cf5  : \cf10 Write\cf5  & \cf6 Execute\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf8 6.\cf5  \cf8 2\cf5  : \cf10 Write\cf5  \cf6 Only\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf8 7.\cf5  \cf8 1\cf5  : \cf9 Execute \cf6 Only\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf8 8.\cf5  \cf8 0\cf5  : \cf6 None\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf8 \cb7 4.\cf5  \cf9 We define variables like \cf10 this\cf5  \cf2 myName\cf5 =\cf12 "Derek"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb3 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 a\cf4 .\cf5  \cf9 The variable name starts \cf6 with\cf5  \cf6 a\cf5  \cf9 letter \cf10 or\cf5  \cf6 _\cf5  \cf10 and\cf5  \cf10 then\cf5  \cf9 can also contain \cf6 numbers\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 b\cf4 .\cf5  \cf9 The shell treats all variables \cf10 as\cf5  \cf10 strings\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 c\cf4 .\cf5  \cf9 When \cf6 declaring\cf5  \cf6 a\cf5  \cf9 variable you \cf6 can't\cf5  \cf9 have whitespace on either side of \cf2 the\cf5  =\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 d\cf4 .\cf5  \cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 declare\cf5  -\cf6 r\cf5  \cf2 NUM1\cf5 =\cf8 5\cf5  \cf11 # Declare a constant\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 num2\cf5 =\cf8 4\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Use arithmetic expansion for adding\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 num3\cf5 =\cf4 $((\cf2 NUM1\cf5 +\cf2 num2\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 num4\cf5 =\cf4 $((\cf2 NUM1\cf5 -\cf2 num2\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 num5\cf5 =\cf4 $((\cf2 NUM1\cf5 *\cf2 num2\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 num6\cf5 =\cf4 $((\cf2 NUM1\cf5 /\cf2 num2\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Place variables in strings with $\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "5 + 4 = $num3"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "5 - 4 = $num4"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "5 * 4 = $num5"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "5 / 4 = $num6"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf4 $((\cf5  \cf8 5\cf5 **\cf8 2\cf5  \cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf4 $((\cf5  \cf8 5\cf5 %\cf8 4\cf5  \cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Assignment operators allow for shorthand arithmetic \cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # +=, -=, *=, /=\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 rand\cf5 =\cf8 5\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf9 let \cf2 rand\cf5 +=\cf8 4\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "$rand"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Shorthand increment and decrement\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "rand++ = $(( rand++ ))"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "++rand = $(( ++rand ))"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "rand-- = $(( rand-- ))"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "--rand = $(( --rand ))"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Use Python to add floats\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 num7\cf5 =\cf8 1.2\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 num8\cf5 =\cf8 3.4\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 num9\cf5 =\cf4 $(\cf2 python\cf5  -\cf6 c\cf5  \cf12 "print $num7+$num8"\cf4 )\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf2 $num9\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # You can print over multiple lines with a Here Script\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # cat prints a file or any string past to it\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 cat\cf5  << \cf10 END\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 This\cf5  \cf9 text\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3 	prints on\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb7 	many lines\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3 	\cf10 END\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  \cf2 II\cf4 .\cf5  \cf6 Functions\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  \cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf8 1.\cf5  \cf9 You can \cf10 use\cf5  \cf9 functions \cf10 to\cf5  \cf9 avoid the need \cf10 to\cf5  \cf10 write\cf5  \cf9 duplicate \cf6 code\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf8 2.\cf5  \cf9 Delete all code \cf10 in\cf5  \cf10 Vim\cf5  \cf9 with gg \cf10 then\cf5  \cf6 dG\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf8 3.\cf5  \cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf11 # Define function\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf9 getDate\cf4 ()\cf5  \cf4 \{\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf11 # Get current date and time\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf10 date\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf11 # Return returns an exit status number between 0 - 255\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf10 return\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf4 \}\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf2 getDate\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf11 # This is a global variable\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf2 name\cf5 =\cf12 "Derek"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf11 # Local variable values aren't available outside of the function\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf9 demLocal\cf4 ()\cf5  \cf4 \{\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf9 local \cf2 name\cf5 =\cf12 "Paul"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf10 return\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf4 \}\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf9 demLocal\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3  	\cf10 echo\cf5  \cf12 "$name"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf11 # A function that receives 2 values and prints a sum\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf9 getSum\cf4 ()\cf5  \cf4 \{\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf11 # Attributes are retrieved by referring to $1, $2, etc.\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf9 local \cf2 num3\cf5 =\cf4 $\cf8 1\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf9 local \cf2 num4\cf5 =\cf4 $\cf8 2\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf11 # Sum values\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf9 local \cf2 sum\cf5 =\cf4 $((\cf2 num3\cf5 +\cf2 num4\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf11 # Pass values back with echo\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf10 echo\cf5  \cf2 $sum\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf4 \}\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf2 num1\cf5 =\cf8 5\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf2 num2\cf5 =\cf8 6\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf11 # You pass atributes by separating them with a space\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf11 # Surround function call with $() to get the return value\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf2 sum\cf5 =\cf4 $(\cf9 getSum num1 \cf2 num2\cf4 )\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf10 echo\cf5  \cf12 "The sum is $sum"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \cb3 III\cf4 .\cf5  \cf2 Conditionals\cf5  / \cf6 Input\cf5  \cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf8 1.\cf5  \cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # You can use read to receive input which is stored in name\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # The p option says that we want to prompt with a string\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf10 read\cf5  -\cf6 p\cf5  \cf12 "What is your name? "\cf5  \cf9 name\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3 \'a0\'a0	\cf10 echo\cf5  \cf12 "Hello $name"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf10 read\cf5  -\cf6 p\cf5  \cf12 "How old are you? "\cf5  \cf2 age\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	 \cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf11 # You place your condition with in []\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf11 # Include a space after [ and before ]\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf11 # Integer Comparisons: eq, ne, le, lt, ge, gt\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf10 if\cf5  \cf4 [\cf5  \cf2 $age\cf5  -\cf6 ge\cf5  \cf8 16\cf5  \cf4 ]\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0		\cf10 echo\cf5  \cf12 "You can drive"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf11 # Check another condition\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf10 elif\cf5  \cf4 [\cf5  \cf2 $age\cf5  -\cf6 eq\cf5  \cf8 15\cf5  \cf4 ]\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0		\cf10 echo\cf5  \cf12 "You can drive next year"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf11 # Executed by default\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf10 else\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\'a0\'a0\cf10 echo\cf5  \cf12 "You can't drive"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\'a0\'a0\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf11 # Closes the if statement\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf8 2.\cf5  \cf9 Extended \cf10 integer\cf5  \cf10 test\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf10 read\cf5  -\cf6 p\cf5  \cf12 "Enter a number : "\cf5  \cf9 num\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3  	\cf10 if\cf5  \cf4 ((\cf2 num\cf5  == \cf8 10\cf4 ));\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf10 echo\cf5  \cf12 "Your number equals 10"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf10 if\cf5  \cf4 ((\cf2 num\cf5  > \cf8 10\cf4 ));\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf10 echo\cf5  \cf12 "It is greater then 10"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf10 else\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf10 echo\cf5  \cf12 "It is less then 10"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf10 if\cf5  \cf4 ((\cf5  \cf4 ((\cf2 num\cf5  % \cf8 2\cf4 ))\cf5  == \cf8 0\cf5  \cf4 ));\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf10 echo\cf5  \cf12 " It is even"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf11 # You can use logical operators like &&, || and !\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf10 if\cf5  \cf4 ((\cf5  \cf4 ((\cf2 num\cf5  > \cf8 0\cf4 ))\cf5  && \cf4 ((\cf2 num\cf5  < \cf8 11\cf4 ))\cf5  \cf4 ));\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf10 echo\cf5  \cf12 "$num is between 1 and 10"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf11 # && and || can be used as control structures\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf11 # Create a file and then if that worked open it in Vim\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf10 touch\cf5  \cf2 samp_file\cf5  && \cf10 vim\cf5  \cf2 samp_file\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf11 # If samp_dir doesn't exist make it\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf4 [\cf5  -\cf6 d\cf5  \cf2 samp\cf4 _\cf6 dir\cf5  \cf4 ]\cf5  || \cf10 mkdir\cf5  \cf2 samp_dir\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  	\cf11 # Delete file rm samp_file\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  	\cf11 # Delete directory rmdir samp_dir\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf8 3.\cf5  \cf9 Testing \cf10 strings\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 str1\cf5 =\cf12 ""\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 str2\cf5 =\cf12 "Sad"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 str3\cf5 =\cf12 "Happy"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Test if a string is null\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 if\cf5  \cf4 [\cf5  \cf12 "$str1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf10 echo\cf5  \cf12 "$str1 is not null"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 if\cf5  \cf4 [\cf5  -\cf6 z\cf5  \cf12 "$str1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf10 echo\cf5  \cf12 "str1 has no value"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Check for equality\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 if\cf5  \cf4 [\cf5  \cf12 "$str2"\cf5  == \cf12 "$str3"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "$str2 equals $str3"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 elif\cf5  \cf4 [\cf5  \cf12 "$str2"\cf5  != \cf12 "$str3"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "$str2 is not equal to $str3"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 if\cf5  \cf4 [\cf5  \cf12 "$str2"\cf5  > \cf12 "$str3"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "$str2 is greater then $str3"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 elif\cf5  \cf4 [\cf5  \cf12 "$str2"\cf5  < \cf12 "$str3"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "$str2 is less then $str3"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Check the file test_file1 and test_file2\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 file1\cf5 =\cf12 "./test_file1"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 file2\cf5 =\cf12 "./test_file2"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 if\cf5  \cf4 [\cf5  -\cf6 e\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "$file1 exists"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 f\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is a normal file"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 r\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is readable"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 w\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is writable"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 x\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is executable"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 d\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is a directory"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 L\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is a symbolic link"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 p\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is a named pipe"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 S\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is a network socket"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 G\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is owned by the group"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 [\cf5  -\cf6 O\cf5  \cf12 "$file1"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 			\cf10 echo\cf5  \cf12 "$file1 is owned by the userid"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 4.\cf5  \cf9 With extended \cf10 test\cf5  \cf4 [[\cf5  \cf4 ]]\cf5  \cf9 you can \cf10 use\cf5  \cf9 Regular \cf2 Expressions\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 read\cf5  -\cf6 p\cf5  \cf12 "Validate Date : "\cf5  \cf10 date\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 pat\cf5 =\cf12 "^[0-9]\{8\}$"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 if\cf5  \cf4 [[\cf5  \cf2 $date\cf5  =~ \cf2 $pat\cf5  \cf4 ]];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "$date is valid"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 else\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "$date is not valid"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf8 5.\cf5  \cf11 # Read multiple values\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 read\cf5  -\cf6 p\cf5  \cf12 "Enter 2 Numbers to Sum : "\cf5  \cf9 num1 num2\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb7 	\cf2 sum\cf5 =\cf4 $((\cf2 num1\cf5 +\cf2 num2\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "$num1 + $num2 = $sum"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Hide the input with the s code\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 read\cf5  -\cf6 sp\cf5  \cf12 "Enter the Secret Code"\cf5  \cf9 secret\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3 	\cf10 if\cf5  \cf4 [\cf5  \cf12 "$secret"\cf5  == \cf12 "password"\cf5  \cf4 ];\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "Enter"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 else\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "Wrong Password"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf8 6.\cf5  \cf9 You can set \cf10 what\cf5  \cf9 separates the values with \cf2 IFS\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Store the original value of IFS\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 OIFS\cf5 =\cf12 "$IFS"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Set what separates the input values\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 IFS\cf5 =\cf12 ","\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 read\cf5  -\cf6 p\cf5  \cf12 "Enter 2 numbers to add separated by a comma"\cf5  \cf9 num1\cf5  \cf9 num2\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Use the parameter expansion $\{\} to substitute any whitespace\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # with nothing\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 num1\cf5 =\cf4 $\{\cf2 num1\cf5 //\cf4 [[\cf5 :\cf2 blank\cf5 :\cf4 ]]\cf5 /\cf4 \}\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 num2\cf5 =\cf4 $\{\cf2 num2\cf5 //\cf4 [[\cf5 :\cf2 blank\cf5 :\cf4 ]]\cf5 /\cf4 \}\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 sum\cf5 =\cf4 $((\cf2 num1\cf5 +\cf2 num2\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "$num1 + $num2 = $sum"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Reset IFS to the original value\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 IFS\cf5 =\cf12 "$OIFS"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Parameter expansion allows you to do this\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 name\cf5 =\cf12 "Derek"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "$\{name\}'s Toy"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # The search and replace allows this\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 samp_string\cf5 =\cf12 "The dog climbed the tree"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "$\{samp_string//dog/cat\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # You can assign a default value if it doesn't exist\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "I am $\{name:-Derek\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # This uses the default if it doesn't exist and assigns the value\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # to the variable\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "I am $\{name:=Derek\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf2 $name\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 7.\cf5  \cf10 Use\cf5  \cf10 case\cf5  \cf10 to\cf5  \cf9 when it makes \cf10 more\cf5  \cf9 sense \cf10 then\cf5  \cf10 if\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 read\cf5  -\cf6 p\cf5  \cf12 "How old are you : "\cf5  \cf2 age\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Check the value of age\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 case\cf5  \cf2 $age\cf5  \cf10 in\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Match numbers 0 - 4\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf4 [\cf8 0\cf5 -\cf8 4\cf4 ])\cf5  \cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "To young for school"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf4 ;;\cf5  \cf11 # Stop checking further\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Match only 5\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 5\cf4 )\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf10 echo\cf5  \cf12 "Go to kindergarten"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf4 ;;\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Check 6 - 18\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf4 [\cf8 6\cf5 -\cf8 9\cf4 ]\cf5 |\cf8 1\cf4 [\cf8 0\cf5 -\cf8 8\cf4 ])\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf2 grade\cf5 =\cf4 $((\cf2 age\cf5 -\cf8 5\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf10 echo\cf5  \cf12 "Go to grade $grade"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf4 ;;\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Default action\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	*\cf4 )\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf12 "You are to old for school"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf4 ;;\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 esac\cf5  \cf11 # End case\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 8.\cf5  \cf9 Ternary Operator performs different actions based \cf6 on\cf5  \cf6 a\cf5  \cf2 condition\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 can_vote\cf5 =\cf8 0\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 age\cf5 =\cf8 18\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf4 ((\cf2 age\cf5 >=\cf8 18\cf4 ?(\cf2 can_vote\cf5 =\cf8 1\cf4 )\cf5 :\cf4 (\cf2 can_vote\cf5 =\cf8 0\cf4 )))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "Can Vote : $can_vote"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \cb3 IV\cf4 .\cf5  \cf9 Parameter Expansions \cf10 and\cf5  \cf10 Strings\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf8 1.\cf5  \cf10 Strings\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 rand_str\cf5 =\cf12 "A random string"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Get string length\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "String Length : $\{#rand_str\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Get string slice starting at index (0 index)\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "$\{rand_str:2\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Get string with starting and ending index\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "$\{rand_str:2:7\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Return whats left after A\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "$\{rand_str#*A \}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb3 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \cb7 V\cf4 .\cf5  \cf6 Looping\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb3 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 1.\cf5  \cf10 While\cf5  \cf2 Loop\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 num\cf5 =\cf8 1\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 while\cf5  \cf4 [\cf5  \cf2 $num\cf5  -\cf6 le\cf5  \cf8 10\cf5  \cf4 ];\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf2 $num\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf2 num\cf5 =\cf4 $((\cf2 num\cf5  + \cf8 1\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 done\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 2.\cf5  \cf10 Continue\cf5  \cf10 and\cf5  \cf10 Break\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 num\cf5 =\cf8 1\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 while\cf5  \cf4 [\cf5  \cf2 $num\cf5  -\cf6 le\cf5  \cf8 20\cf5  \cf4 ];\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf11 # Don't print evens\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 if\cf5  \cf4 ((\cf5  \cf4 ((\cf2 num\cf5  % \cf8 2\cf4 ))\cf5  == \cf8 0\cf5  \cf4 ));\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  			\cf2 num\cf5 =\cf4 $((\cf2 num\cf5  + \cf8 1\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  			\cf10 continue\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf11 # Jump out of the loop with break\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf10 if\cf5  \cf4 ((\cf2 num\cf5  >= \cf8 15\cf4 ));\cf5  \cf10 then\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  			\cf10 break\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7  		\cf10 fi\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3  		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf2 $num\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf2 num\cf5 =\cf4 $((\cf2 num\cf5  + \cf8 1\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 done\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 3.\cf5  \cf10 Until\cf5  \cf9 loops \cf10 until\cf5  \cf9 the loop \cf10 is\cf5  \cf10 true\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 num\cf5 =\cf8 1\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 until\cf5  \cf4 [\cf5  \cf2 $num\cf5  -\cf6 gt\cf5  \cf8 10\cf5  \cf4 ];\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf2 $num\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf2 num\cf5 =\cf4 $((\cf2 num\cf5  + \cf8 1\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 done\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 4.\cf5  \cf10 Use\cf5  \cf10 read\cf5  \cf10 and\cf5  \cf6 a\cf5  \cf9 loop \cf10 to\cf5  \cf9 output \cf10 file\cf5  \cf2 info\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf10 while\cf5  \cf10 read\cf5  \cf9 avg rbis \cf2 hrs\cf4 ;\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0		\cf11 # printf allows you to use \\n\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0		\cf10 printf\cf5  \cf12 "Avg: $\{avg\}\\nRBIs: $\{rbis\}\\nHRs: $\{hrs\}\\n"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf11 # Pipe data into the while loop\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf10 done\cf5  < \cf2 barry_bonds\cf9 .txt\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf8 5.\cf5  \cf9 There are many \cf10 for\cf5  \cf9 loop \cf2 options\cf4 .\cf5  \cf9 Here \cf10 is\cf5  \cf6 the\cf5  \cf6 C\cf5  \cf2 form\cf4 .\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf10 for\cf5  \cf4 ((\cf5  \cf2 i\cf5 =\cf8 0\cf4 ;\cf5  \cf2 i\cf5  <= \cf8 10\cf4 ;\cf5  \cf2 i\cf5 =\cf2 i\cf5 +\cf8 1\cf5  \cf4 ));\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0		\cf10 echo\cf5  \cf2 $i\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf10 done\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf8 6.\cf5  \cf9 We\cf5  \cf9 can\cf5  \cf9 cycle\cf5  \cf9 through\cf5  \cf9 ranges\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf10 for\cf5  \cf9 i\cf5  \cf10 in\cf5  \cf4 \{\cf2 A\cf4 .\cf9 .Z\cf4 \};\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0		\cf10 echo\cf5  \cf2 $i\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf10 done\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 \'a0\'a0	\cf8 7.\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 \'a0\'a0	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf10 \cb7 VI\cf4 .\cf5  \cf6 Arrays\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb3 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 1.\cf5  \cf10 Bash\cf5  \cf9 arrays can only have one dimension \cf10 and\cf5  \cf9 indexes start \cf10 at\cf5  \cf8 0\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 2.\cf5  \cf9 Messing with \cf2 arrays\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Create an array\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 fav_nums\cf5 =\cf4 (\cf8 3.14\cf5  \cf8 2.718\cf5  \cf4 .\cf8 57721\cf5  \cf8 4.6692\cf4 )\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "Pi : $\{fav_nums[0]\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Add value to array\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 fav_nums\cf4 [\cf8 4\cf4 ]\cf5 =\cf8 1.618\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "GR : $\{fav_nums[4]\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Add group of values to array\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 fav_nums\cf5 +=\cf4 (\cf8 1\cf5  \cf8 7\cf4 )\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Output all array values\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 for\cf5  \cf9 i\cf5  \cf10 in\cf5  \cf4 $\{\cf2 fav_nums\cf4 [\cf5 *\cf4 ]\};\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf2 $i\cf4 ;\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 done\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Output indexes\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 for\cf5  \cf9 i\cf5  \cf10 in\cf5  \cf4 $\{\cf5 !\cf2 fav_nums\cf4 [@]\};\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf10 echo\cf5  \cf2 $i\cf4 ;\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 done\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Get number of items in array\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 echo\cf5  \cf12 "Array Length : $\{#fav_nums[@]\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Get length of array element\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "Index 3 length : $\{#fav_nums[3]\}"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Sort an array\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf2 sorted_nums\cf5 =\cf4 ($(\cf10 for\cf5  \cf6 i\cf5  \cf10 in\cf5  \cf12 "$\{fav_nums[@]\}"\cf4 ;\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf2 $i\cf4 ;\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 done\cf5  | \cf10 sort\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 for\cf5  \cf9 i\cf5  \cf10 in\cf5  \cf4 $\{\cf2 sorted_nums\cf4 [\cf5 *\cf4 ]\};\cf5  \cf10 do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf10 echo\cf5  \cf2 $i\cf4 ;\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 done\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Delete array element\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 unset\cf5  \cf12 'sorted_nums[1]'\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # Delete Array\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf9 unset sorted_nums\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb7 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf2 \cb7 VII\cf4 .\cf5  \cf9 Positional \cf6 Parameters\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \cb3 \'a0\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 1.\cf5  \cf9 Positional parameters are variables that can store data on the \cf10 command\cf5  \cf9 line \cf10 in\cf5  \cf9 variable \cf6 names\cf5  \cf8 0\cf5  - \cf8 9\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf2 a\cf4 .\cf5  \cf4 $\cf8 0\cf5  \cf9 always contains the path \cf10 to\cf5  \cf9 the executed \cf6 script\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf2 b\cf4 .\cf5  \cf9 You\cf5  \cf9 can\cf5  \cf9 access\cf5  \cf9 names\cf5  \cf9 past\cf5  \cf8 9\cf5  \cf9 by\cf5  \cf9 using\cf5  \cf9 parameter\cf5  \cf9 expansion\cf5  \cf9 like\cf5  \cf10 this\cf5  \cf4 $\{\cf8 10\cf4 \}\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf8 2.\cf5  \cf9 Add all numbers on the \cf10 command\cf5  \cf2 line\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 #!/bin/bash\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf11 # Print the first argument\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "1st Argument : $1"\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf2 sum\cf5 =\cf8 0\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf11 # $# tells you the number of arguments\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf10 while\cf5  \cf4 [[\cf5  \cf4 $\cf11 # -gt 0 ]]; do\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf11 # Get the first argument\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf2 num\cf5 =\cf4 $\cf8 1\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf2 sum\cf5 =\cf4 $((\cf2 sum\cf5  + \cf2 num\cf4 ))\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf11 # shift moves the value of $2 into $1 until none are left\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 		\cf11 # The value of $# decrements as well\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 		\cf9 shift\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb7 	\cf10 done\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb3 	\cf6 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf5 \cb7 	\cf10 echo\cf5  \cf12 "Sum : $sum"\
+\
+SORT Command \
+\
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f2\fs26 \cf13 \cb14 \outl0\strokewidth0 \strokec13 sort - sort file\
+sort -t, -k1 file1 - sort file1 by column 1, delimited by comma (,)\
+sort -r -t, -k1 file1 - in reverse\
+sort -n -t, -k1 file1 - sort by numerical value\
+sort -f file1 - case insensitive sort\
+sort -t'|' +0 -2 - sort by the first 2 fields, starting from 0+1th field and end at 2nd field.\
+\
+sed - special editor\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf4 \cb15 \outl0\strokewidth0 sed 's/pattern/replacement/g data.txt search and replacement globally\cf13 \cb14 \outl0\strokewidth0 \strokec13 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf13 sed 's/pattern/replacement/gi' - \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 search and replacement globally and case insensitively\
+sed 's/pattern/&replacement/gi' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - & represents the pattern found\
+sed 's/\\(group\\)pattern/\\1/gi' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - \\1 contains value of 1st group\
+sed 's/hello/bye/2g' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - replacements second occurrence of hello\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf4 \cb15 \outl0\strokewidth0 sed 's/hElLo/bye/2gi\'92 \cf4 \cb15 data.txt \cf4 \cb15 - replacements second occurrence of hello case insensitive\cf13 \cb14 \outl0\strokewidth0 \strokec13 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf13 sed '/pattern/p' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - will print out occurrences of pattern\
+sed -e 'command1' -e 'command2' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - run multiple commands\
+VAR=\cf4 \cb15 \outl0\strokewidth0 "\cf13 \cb14 \outl0\strokewidth0 \strokec13 McDonald\cf4 \cb15 \outl0\strokewidth0 "\cf13 \cb14 \outl0\strokewidth0 \strokec13 \
+sed 's/'"$VAR"'/replacement/' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - using external variables in sed\
+sed '2 s/pattern/replacement/' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - replace only for line 2. you can also specify line range, 1,10\
+sed '/pattern1/ s/pattern2/replacement/' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - find pattern1, for those lines, replace pattern2 with replacement\
+sed '/start/,/end/ s/pattern/replacement/' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - using patterns as line number range. you can also mix line number with pattern\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf4 \cb15 \outl0\strokewidth0 sed \'913,/end/ s/pattern/replacement/' \cf4 \cb15 data.txt \cf4 \cb15 - using patterns as line number range. you can also mix line number with pattern\cf13 \cb14 \outl0\strokewidth0 \strokec13 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf13 sed '1,10d' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - deletes line 1 to 10. you can also mix pattern range as well\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf4 \cb15 \outl0\strokewidth0 sed -i \'911,10d' \cf4 \cb15 data.txt \cf4 \cb15 - goes into the file and deletes line 1 to 10. you can also mix pattern range as well\cf13 \cb14 \outl0\strokewidth0 \strokec13 \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf13 sed '100,$d' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - delete from line 100 to end of file\
+sed '100,$!d' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - delete from line 1 to line 100. ! means inverse operation.\
+sed 'y/ABC/abc/' \cf4 \cb15 \outl0\strokewidth0 data.txt \cf13 \cb14 \outl0\strokewidth0 \strokec13 - replacement each character with corresponding characters
+\f1\fs24 \cf12 \cb7 \outl0\strokewidth0 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf12 \
+\pard\pardeftab720\sl300\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.grymoire.com/Unix/Sed.html"}}{\fldrslt 
+\f2\fs26 \cf16 \cb14 \outl0\strokewidth0 \strokec16 http://www.grymoire.com/Unix/Sed.html}}
+\f2\fs26 \cf16 \cb14 \outl0\strokewidth0 \strokec16 \
+\
+\
+-F is for delimiter \
+\pard\pardeftab720\sl300\partightenfactor0
+\cf13 \strokec13 awk -F'|' 'BEGIN\{ initialization \} \{ code block \} END\{ finalization \}' filename- general syntax. code block will be executed for every line in the file\
+default delimiter is space ' '\
+awk -F, \cf4 \cb15 \outl0\strokewidth0 '\cf13 \cb14 \outl0\strokewidth0 \strokec13 \{ print $0 \}\cf4 \cb15 \outl0\strokewidth0 '\cf13 \cb14 \outl0\strokewidth0 \strokec13  data.txt - $0 represents the whole line of the file\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf4 \cb15 \outl0\strokewidth0 awk -F, '\{ print $1 \}' data.txt - $1 represents the first column of the file\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf4 \cb15 awk -F, '\{ print $1$2 \}' data.txt - prints firstsecond column \
+awk -F, '\{ print $1,$2 \}' data.txt - prints first second column \
+awk -F, '\{ OFS="|";print $1,$2 \}' data.txt - OFS is output field delimiter. prints first|second column \
+awk -F, '\{ print $1\cf4 \cb15 "\cf4 \cb15 |\cf4 \cb15 "\cf4 \cb15 $2 \}' data.txt - prints first|second column \
+awk -F, 'NR>1 \{ OFS="|";print $1,$2 \}' data.txt - prints first|second column for rows greater than 1\
+awk -F, '/2013-05/ \{ OFS="|";print $1,$2 \}' data.txt - prints first|second column for rows that matches 2013-05\
+awk -F, '/2013-05/ \{ OFS="|";print $1,$2,NF \}' data.txt - prints first|second|no of fields columns for rows that matches 2013-05\
+awk -F, '/2013-05/ \{ OFS="|";print $1,$2,FILENAME \}' data.txt - prints first|second|filename columns for rows that matches 2013-05\
+awk -F, '/2013-05/ \{ OFS="|";print $1,$2,\'94\'92$HOME'"\}\'92 data.txt - prints first|second|env_variable columns for rows that matches 2013-05\
+awk -F, \{ OFS=\'93|\'94;if($1~/2013-05/)\{print $1,$2\}\}\'92 data.txt - prints first|second|env_variable columns if first column matches 2013-05\
+awk \'91BEGIN \{ FS=\'93,\'94; sum = 0; count = 0\} \\\
+\{ if(NR>=2) \{ sum = sum+$5; count++; \\\
+printf(\'93Day:%d Avg:%f Sum:%f field:%f \\n\'94,count,sum/count,sum,$5) \} \}\'92 data.txt\
+\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf13 \cb14 \outl0\strokewidth0 \strokec13 \
+VAR="value" - define a variable\
+print VAR - print a variable\
+NF is number of fields in each line\
+$NF is value of last field\
+print "'$EXTERNAL_VAR'" - double single $EXTERNAL_VAR single double\
+VAR~/pattern/ - pattern patching\
+VAR!~/pattern/ - does not match\
+FS returns value of field separator, same as -F\
+OFS returns output field separator\
+print $1,$2 is separated\
+NR returns line number\
+FILENAME returns current filename\
+awk -v var1=value1 - pre-assign values to variables in awk\
+awk -F, 'conditions \{ code block \}' filename - condition must be right before code block\
+\
+cut - get columns from file\
+cut -d, -f1-2 filename - print 1st to 2nd columns\
+cut -c1-5 filename - print first 5 characters\
+cut -d, -f2- filename - print from 2nd column to last column\
+cut -d, -f1,4,5 filename - print 1st, 4th and 5th column\
+cut -d, -f-3 filename - print from 1st to 3rd column\
+cut -d, -f1,3-5 filename - print 1st, 3rd to 5th column\
+\
+cut -d, -f1,2,3 data.txt\
+cut -d, -f3-5 data.txt\
+cut -d, -f-5 data.txt\
+cut -d, -f5- data.txt\
+cut -d, -f1,5- data.txt\
+cut -c1-10 data.txt\
+cut -c1,10-20 data.txt\
+\
+wc - word count\
+wc -l - line count\
+wc -c - print number of bytes\
+wc - print number of newline, word and bytes\
+wc -m - character count\
+wc -w - word count\
+\
+wc -l < data.txt  gives the line count\
+wc -l data.txt - gives the line count and filename \
+wc data.txt - gives no: of lines, words, bytes, filename\
+wc -c data.txt - gives no: of bytes\
+wc -w data.txt - gives no: of words\
+wc -m data.txt - gives no: of characters.\
+\
+last - check login history\
+last -10 - show last 10 logins\
+last -F - show full login information
+\f1\fs24 \cf12 \cb7 \outl0\strokewidth0 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf12 \
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf6 \
+}
